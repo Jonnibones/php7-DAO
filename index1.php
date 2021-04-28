@@ -21,4 +21,10 @@ $usuario = new Usuario();
 $usuario->login("Jonathan", "1234");
 echo $usuario;
 
+//$aluno = new Usuario();
+//$aluno->setDeslogin("f5");
+//$aluno->setDesenha("5454");
+//$aluno->insert();
+//echo $aluno;
+
  ?>

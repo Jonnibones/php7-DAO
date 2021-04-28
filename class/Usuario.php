@@ -137,6 +137,30 @@ public function insert(){
 
 }
 
+public function __construct($login = "", $password = ""){
+
+	$this->setDeslogin($login);
+	$this->setDesenha($password);
+
+}
+
+public function update($login, $password){
+
+	$this->setDeslogin($login);
+	$this->setdesenha($password);
+
+	$sql = new Sql();
+
+	$sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, desenha = :PASSWORD WHERE idusuario = :ID", array(
+
+		':LOGIN'=>$this->getDeslogin(),
+		':PASSWORD'=>$this->getDesenha(),
+		':ID'=>$this->getIdusuario()
+
+	));
+
+}
+
 
 public function __toString(){
 

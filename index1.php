@@ -17,14 +17,21 @@ echo $root;*/
 //echo json_encode($search);
 
 //carrega usuario usando login e senha
-$usuario = new Usuario();
-$usuario->login("Jonathan", "1234");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("Jonathan", "1234");
+//echo $usuario;
 
-//$aluno = new Usuario();
-//$aluno->setDeslogin("f5");
-//$aluno->setDesenha("5454");
+//Inserindo o usuario
+//$aluno = new Usuario("f5","3434");
 //$aluno->insert();
 //echo $aluno;
+
+$usuario = new Usuario();
+
+$usuario->loadByid(8);
+
+$usuario->update("zequinha", "88888");
+
+echo $usuario;
 
  ?>

@@ -26,12 +26,18 @@ echo $root;*/
 //$aluno->insert();
 //echo $aluno;
 
-$usuario = new Usuario();
-
+//alterar um usuario
+/*$usuario = new Usuario();
 $usuario->loadByid(8);
-
 $usuario->update("zequinha", "88888");
+echo $usuario; */
 
+$usuario = new Usuario();
+$usuario->loadByid(8);
+$usuario->delete();
 echo $usuario;
+
+
+
 
  ?>
